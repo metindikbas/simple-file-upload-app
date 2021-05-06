@@ -1,6 +1,8 @@
 # Simple File Upload Application
 
-Angular 11 and .NET 5 powered file upload web application
+Angular 11 and .NET 5 powered file upload web application.
+
+Backend API is running with In-Memory database. It can be changed easily by changing appsettings file.  
 
 ## Installation
 
