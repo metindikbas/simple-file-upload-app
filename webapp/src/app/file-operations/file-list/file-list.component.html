@@ -1,0 +1,6 @@
+<div class="container mt-5 mx-auto text-center">
+  <div *ngFor="let contentType of contentTypes">
+    <h2>{{ contentType }}</h2>
+    <app-paginated-files-table [fileContentType]="contentType" (onShowFileViewDialog)="showDialog($event)"></app-paginated-files-table>
+  </div>
+</div>

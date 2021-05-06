@@ -1,0 +1,31 @@
+<mat-dialog-content class="mat-typography">
+  <mat-card *ngIf="file" class="content-card">
+    <mat-card-header>
+      <mat-card-title>{{ file.fileName }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="file.contentData" />
+    <mat-card-content>
+      <div class="responsive-table">
+        <table class="table">
+          <tbody>
+            <tr class="border-0 bg-light">
+              <th>Id:</th>
+              <td>{{ file.id }}</td>
+            </tr>
+            <tr>
+              <th>Upload Date:</th>
+              <td>{{ file.uploadDate | date: 'yyyy-MM-dd HH:mm' }}</td>
+            </tr>
+            <tr>
+              <th>File Size:</th>
+              <td>{{ file.fileSizeInMb.toFixed(2) }} MB</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

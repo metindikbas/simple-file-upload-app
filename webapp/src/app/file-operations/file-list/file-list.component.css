@@ -1,0 +1,7 @@
+.text-danger {
+  font-size: 2em;
+}
+
+.text-danger:hover {
+  cursor: pointer;
+}
