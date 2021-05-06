@@ -2,6 +2,6 @@ export interface FileViewDto {
   id: string;
   fileName: string;
   uploadDate: Date;
-  fileSizeInMb: number;
+  fileSizeInKb: number;
   contentData: string;
 }

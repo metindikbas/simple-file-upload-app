@@ -40,7 +40,7 @@ namespace SimpleFileUpload.Application.SimpleFiles.Queries.ListFiles
                     Id = x.Id,
                     FileName = x.FileName,
                     UploadDate = x.UploadDate,
-                    FileSizeInMb = (decimal) ((x.ContentSize / 1024f) / 1024f),
+                    FileSizeInKb = (decimal)(x.ContentSize / 1024f),
                 })
                 .PaginatedListAsync(request.PageNumber, request.PageSize);
             return result;

@@ -8,6 +8,6 @@ namespace SimpleFileUpload.Application.SimpleFiles.Queries.GetFile
         public string FileName { get; set; }
         public DateTime UploadDate { get; set; }
         public string ContentData { get; set; }
-        public decimal FileSizeInMb { get; set; }
+        public decimal FileSizeInKb { get; set; }
     }
 }

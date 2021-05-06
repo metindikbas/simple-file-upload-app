@@ -7,6 +7,6 @@ namespace SimpleFileUpload.Application.SimpleFiles.Queries.ListFiles
         public Guid Id { get; set; }
         public string FileName { get; set; }
         public DateTime UploadDate { get; set; }
-        public decimal FileSizeInMb { get; set; }
+        public decimal FileSizeInKb { get; set; }
     }
 }

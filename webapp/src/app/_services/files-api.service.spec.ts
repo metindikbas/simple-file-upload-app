@@ -39,13 +39,13 @@ describe('FilesApiService', () => {
       const dummyFiles: FileDto[] = [
         {
           fileName: 'file',
-          fileSizeInMb: 1,
+          fileSizeInKb: 1,
           id: '1',
           uploadDate: new Date(),
         },
         {
           fileName: 'file2',
-          fileSizeInMb: 2,
+          fileSizeInKb: 2,
           id: '2',
           uploadDate: new Date(),
         },
@@ -64,7 +64,7 @@ describe('FilesApiService', () => {
 
   describe('Get file by id', () => {
     it('should return an Observable<FileViewDto>', () => {
-      const dummyFile = { fileName: 'file2', fileSizeInMb: 2, id: '2', uploadDate: new Date(), contentData: '' };
+      const dummyFile = { fileName: 'file2', fileSizeInKb: 2, id: '2', uploadDate: new Date(), contentData: '' };
 
       service.getFile(dummyFile.id).subscribe((file: FileViewDto) => {
         expect(file.fileName).toBe(dummyFile.fileName);
@@ -77,7 +77,7 @@ describe('FilesApiService', () => {
         id: dummyFile.id,
         fileName: dummyFile.fileName,
         uploadDate: dummyFile.uploadDate,
-        fileSizeInMb: dummyFile.fileSizeInMb,
+        fileSizeInKb: dummyFile.fileSizeInKb,
         contentData: dummyFile.contentData,
       });
     });

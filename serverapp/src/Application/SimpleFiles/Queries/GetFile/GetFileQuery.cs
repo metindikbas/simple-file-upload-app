@@ -34,7 +34,7 @@ namespace SimpleFileUpload.Application.SimpleFiles.Queries.GetFile
             {
                 Id = entity.Id,
                 ContentData = $"data:{entity.ContentType};base64,{Convert.ToBase64String(entity.Content)}",
-                FileSizeInMb = (decimal) ((entity.ContentSize / 1024f) / 1024f),
+                FileSizeInKb = (decimal)(entity.ContentSize / 1024f),
                 FileName = entity.FileName,
                 UploadDate = entity.UploadDate
             };

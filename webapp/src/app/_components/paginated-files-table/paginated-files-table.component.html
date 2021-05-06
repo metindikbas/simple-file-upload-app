@@ -9,7 +9,7 @@
           <div class="p-2 px-3 text-uppercase">Upload Date</div>
         </th>
         <th class="border-0 bg-light" width="150" scope="col">
-          <div class="p-2 px-3 text-uppercase">Size (MB)</div>
+          <div class="p-2 px-3 text-uppercase">Size (KB)</div>
         </th>
         <th class="border-0 bg-light" width="150" scope="col">
           <div class="p-2 px-3 text-uppercase">Actions</div>
@@ -20,7 +20,7 @@
       <tr *ngFor="let f of files">
         <td class="text-left">{{ f.fileName }}</td>
         <td>{{ f.uploadDate | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
-        <td>{{ f.fileSizeInMb.toFixed(2) }} MB</td>
+        <td>{{ f.fileSizeInKb.toFixed(2) }} KB</td>
         <td>
           <button class="btn btn-sm btn-success mr-1" type="button" (click)="showViewModal(f.id)" matTooltip="View">
             <i class="fa fa-search-plus"></i>
